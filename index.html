@@ -11,15 +11,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      ;(function () {
-        emailjs.init("user_dAU3g6AZMCL24O4sHSoQu")
-      })()
-    </script>
   </head>
 
   <body>
@@ -88,7 +79,7 @@
               <i class="fa-brands fa-github"></i>
             </a>
             <a
-              href="./assets/resume.pdf"
+              href="./Lorenzo Sepúlveda CV.pdf"
               target="_blank"
               class="social__link click"
             >
@@ -114,15 +105,15 @@
             Frontend Developer
           </h4>
           <p class="modal__para">
-            I'm a 23-year-old
+            I'm a 24-year-old
             <b class="blue">professional frontend developer</b> with a strong
             passion for developing websites with
             <b class="blue">great user experiences.</b>
             <br />
             I'm currently working on perfecting my coding skills, working on personal projects
             and learning 
-            <b class="blue">TypeScript</b>, <b class="blue">React</b>, and
-            <b class="blue">Javascript</b>
+            <b class="blue">Phyton</b>, <b class="blue">MySQL</b>,
+            <b class="blue">Javascript</b> and more
             every day.
           </p>
           <div class="modal__languages">
@@ -191,6 +182,13 @@
               Send it my way
             </button>
           </form>
+          <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+          </script>
+
+          <script type="text/javascript">
+            emailjs.init('NlMNbqEJNpZhkdsf8')
+          </script>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fa-solid fa-spinner"></i>
           </div>
@@ -231,25 +229,16 @@
                     HTML, CSS, JavaScript
                   </h4>
                   <p class="project__description--para">
-                    Mythic Item Shop is a dynamic frontend e-commerce
-                    application built with React. The Mythic design is based
-                    around purchasing items from the online video game League of
-                    Legends! Application hosted and deployed using Heroku.
+                    I coded the Tic Tac Toe game using HTML, CSS and a little script with JS <br>
+                    You can see the repository clicking the button down below.
                   </p>
                   <div class="project__description--links">
                     <a
-                      href="https://github.com/ethansalonga/mythic-ecommerce"
+                      href="https://github.com/LorenzoSepulveda/Tic-Tac-Toe"
                       class="project__description--link"
                       target="_blank"
                     >
                       <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a
-                      href="https://mythic-ecommerce.herokuapp.com/"
-                      class="project__description--link"
-                      target="_blank"
-                    >
-                      <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
                 </div>
@@ -285,18 +274,11 @@
                   </p>
                   <div class="project__description--links">
                     <a
-                      href="https://github.com/ethansalonga/mythic-ecommerce"
+                      href="https://github.com/LorenzoSepulveda/Tic-Tac-Toe"
                       class="project__description--link"
                       target="_blank"
                     >
                       <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a
-                      href="https://mythic-ecommerce.herokuapp.com/"
-                      class="project__description--link"
-                      target="_blank"
-                    >
-                      <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
                 </div>
@@ -343,7 +325,7 @@
               Contact
             </a>
             <a
-              href="./assets/resume.pdf"
+              href="./Lorenzo Sepúlveda CV.pdf"
               target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
@@ -357,4 +339,26 @@
       </div>
     </footer>
   </body>
+  <script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+      .addEventListener('submit', function(event) {
+      event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_15un0zh';
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+      });
+    });
+  </script>
 </html>
