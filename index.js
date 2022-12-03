@@ -33,7 +33,7 @@ function contact(event) {
       "service_ixruf82",
       "template_hdrdoj8",
       event.target,
-      "user_dAU3g6AZMCL24O4sHSoQu"
+      ""
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible")
