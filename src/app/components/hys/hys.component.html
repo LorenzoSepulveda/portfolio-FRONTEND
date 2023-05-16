@@ -1,0 +1,141 @@
+<div class="row">
+  <h1>Habilidades</h1>
+  <div class="col-lg-2">
+    <button
+      type="button"
+      routerLink="/newskill"
+      class="btn btn-dark"
+      *ngIf="isLogged"
+    >
+      Nueva Skill
+    </button>
+  </div>
+  <div
+    class="text-center col-sm-5 col-md-4 col-lg-4"
+    *ngFor="let skill of skill"
+  >
+    <circle-progress
+      [percent]="skill.porcentaje"
+      [radius]="100"
+      [clockwise]="false"
+      [title]="skill.nombre"
+      [titleColor]="'#fff'"
+      [showImage]="true"
+      [showUnits]="false"
+      [titleFontSize]="'2.5em'"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#9D00FF'"
+      [innerStrokeColor]="'#8c8c8c'"
+      [animation]="true"
+      [animationDuration]="700"
+    ></circle-progress>
+
+    <td *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/edithys/{{ skill.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+    </td>
+    <td *ngIf="isLogged">
+      <button class="btn btn-danger" (click)="delete(skill.id)">
+        <i class="bi bi-trash-fill"></i> BORRAR
+      </button>
+    </td>
+  </div>
+  <div class="text-center col-sm-5 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [showUnits]="false"
+      [clockwise]="false"
+      [imageSrc]="'../../../assets/html-1.png'"
+      [showImage]="true"
+      [imageHeight]="90"
+      [imageWidth]="90"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#9D00FF'"
+      [innerStrokeColor]="'#8c8c8c'"
+      [animation]="true"
+      [animationDuration]="700"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-5 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="95"
+      [radius]="100"
+      [showUnits]="false"
+      [clockwise]="false"
+      [imageSrc]="'../../../assets/CSS3_logo.svg.png'"
+      [showImage]="true"
+      [imageHeight]="90"
+      [imageWidth]="90"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#9D00FF'"
+      [innerStrokeColor]="'#8c8c8c'"
+      [animation]="true"
+      [animationDuration]="700"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-5 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="70"
+      [radius]="100"
+      [showUnits]="false"
+      [clockwise]="false"
+      [imageSrc]="'../../../assets/js.png'"
+      [showImage]="true"
+      [imageHeight]="90"
+      [imageWidth]="90"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#9D00FF'"
+      [innerStrokeColor]="'#8c8c8c'"
+      [animation]="true"
+      [animationDuration]="700"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-5 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="85"
+      [radius]="100"
+      [showUnits]="false"
+      [clockwise]="false"
+      [imageSrc]="'../../../assets/grupal.png'"
+      [showImage]="true"
+      [imageHeight]="90"
+      [imageWidth]="90"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#9D00FF'"
+      [innerStrokeColor]="'#8c8c8c'"
+      [animation]="true"
+      [animationDuration]="700"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-5 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="70"
+      [radius]="100"
+      [showUnits]="false"
+      [clockwise]="false"
+      [imageSrc]="'../../../assets/eng.png'"
+      [showImage]="true"
+      [imageHeight]="90"
+      [imageWidth]="90"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#9D00FF'"
+      [innerStrokeColor]="'#8c8c8c'"
+      [animation]="true"
+      [animationDuration]="700"
+    ></circle-progress>
+  </div>
+</div>

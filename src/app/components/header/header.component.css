@@ -1,0 +1,11 @@
+.row{
+    margin: 0%;
+}
+div{
+    background-color: #303131;
+}
+
+app-redes{
+   float: right;
+   margin-top: 25px; 
+}

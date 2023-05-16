@@ -1,0 +1,10 @@
+.row{
+    background-color: #C5DDFE;
+    padding: 20px;
+    border-top: 3px dotted #ffffff;
+    margin: 0%;
+}
+
+#skills{
+    text-decoration: underline;
+}
