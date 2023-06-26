@@ -9,11 +9,13 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
 
+  //url = 'http://localhost:8080/personas/';
   url = environment.apiUrlPer;
 
   constructor(private http: HttpClient) { }
 
-  public getPersona(): Observable<persona>{
-    return this.http.get<persona>(this.url+'traer/perfil');
+  public getPersona(id:number): Observable<persona>{
+    return this.http.get<persona>(`${this.url}traer/perfil/${id}`);
   }
+
 }

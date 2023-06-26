@@ -5,5 +5,6 @@ export const environment = {
   apiUrlPer: 'https://backendls.onrender.com/personas/',
   apiUrlExp: 'https://backendls.onrender.com/explab/',
   authUrl: 'https://backendls.onrender.com/auth/',
+  apiUrlSkill:'https://backendls.onrender.com/skill/' ,
   authUrlSkills: ''
 };

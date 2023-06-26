@@ -9,7 +9,8 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
 
-  URL = environment.authUrlSkills + 'skill';
+  //URL = environment.authUrlSkills + 'skill/';
+  URL = environment.apiUrlSkill;
 
   constructor(private httpClient: HttpClient) { }
 
